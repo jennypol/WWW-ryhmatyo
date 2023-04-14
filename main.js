@@ -26,7 +26,7 @@ router.use(
   })
 );
 router.use(express.json());
-router.use(cookieParser("secret_passcode"));
+router.use(layouts);
 router.use(
   expressSession({
     secret: "secret_passcode",
@@ -41,6 +41,7 @@ router.use(
 //vaihda nämä kaksi router.use ja router.get kun reitit on määritelty.
 app.use(homeController.logRequestPaths);
 app.get("/", homeController.index);
+
 
 app.use("/", router);
 app.listen(app.get("port"), () => {
