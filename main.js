@@ -39,8 +39,8 @@ router.use(
 );
 
 //vaihda nämä kaksi router.use ja router.get kun reitit on määritelty.
-app.use(homeController.logRequestPaths);
-app.get("/", homeController.index);
+router.use(homeController.logRequestPaths);
+router.get("/", homeController.index);
 
 
 app.use("/", router);
