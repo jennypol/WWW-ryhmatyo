@@ -12,7 +12,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #22b957;
+    background-color: #010101;
     position: fixed;
     top: 0;
     width: 100%;
@@ -31,10 +31,10 @@ li a {
     
 }
 .active{
-    background-color:#2c8f4f;
+    background-color:#272a28;
 }
 li a:hover:not(.active){
-    background-color:#17d158;
+    background-color:#272a28;
 }
 div.headline {
     text-align: center;
@@ -62,11 +62,6 @@ a {
 
 .container {
     padding: 0% 10%;
-}
-
-
-.button:hover {
-    background-color: #63d68b;
 }
 
 .home{
