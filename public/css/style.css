@@ -11,7 +11,7 @@ body {
     width: 100%;
     height: 110px;
     padding: 20px 0 5px 0;
-    border-bottom: solid 8px #697acb;
+    border-bottom: solid 8px #22b957;
     box-shadow: 10px 10px 10px #ccc;
     position: absolute;
     top: 0;
@@ -50,7 +50,7 @@ a {
 }
 
 .button {
-    background-color: #3d41b4;
+    background-color: #22b957;
     padding: 0.3vw 3vw;
     border-radius: 2px;
     cursor: pointer;
@@ -59,7 +59,7 @@ a {
 }
 
 .button:hover {
-    background-color: #697acb;
+    background-color: #63d68b;
 }
 
 .home{
@@ -77,7 +77,7 @@ a {
 
 .list-container {
     padding: 0 20px;
-    border: 3px solid #697acb;
+    border: 3px solid #22b957;
     border-radius: 1px;
 }
 
@@ -91,3 +91,7 @@ a {
     display: block;
     margin: 5px;
 }
+div.polaroid {
+    width: 100%;
+    margin-bottom: 0px;
+  }
