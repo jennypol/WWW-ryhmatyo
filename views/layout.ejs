@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -8,29 +9,23 @@
     <link rel="stylesheet" href="/css/style.css">
 
 </head>
+
 <body>
-    <div id="nav">
-        <div class="col-sm nav-align">
-            <h1 id="title">Traveller's site</h1>
-        </div>
-        <div class="col-sm nav-align">
-            <a href="/">
-                <span class="button">Home</span>
-            </a>
-            <a href="/">
-                <span class="button">Sign in</span>
-            </a>
-            <a href="/">
-                <span class="button">Contact</span>
-            </a>
-        </div>
+<ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href ="#signin">Sign in</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+    <div class="headline">
+        <h1 id="title">Traveller's site</h1>
     </div>
-    <div class = "polaroid">
-        <img src="/images/beach.jpg"alt="nav"style="width:100%">
-    </div>    
+    <div class="polaroid">
+        <img src="/images/beach.jpg" alt="nav" style="width:100%">
+    </div>
 
     <div class="container">
         <%- body %>
     </div>
 </body>
+
 </html>
