@@ -18,7 +18,7 @@ app.use('/signin', router);
 app.use('/contact', router);
 app.use('/news', router);
 app.use('/stories', router);
-
+app.use('/thanks', router);
 
 
 
@@ -53,6 +53,7 @@ router.get("/", homeController.index);
 router.get("/news", homeController.news);
 router.get("/stories", homeController.stories);
 router.get("/contact", homeController.contact);
+router.get("/thanks", homeController.thanks);
 module.exports = router;
 app.listen(app.get("port"), () => {
   console.log(`Server running at http://localhost:${app.get("port")}`);
