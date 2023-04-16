@@ -41,8 +41,8 @@ router.use(
 //vaihda nämä kaksi router.use ja router.get kun reitit on määritelty.
 router.use(homeController.logRequestPaths);
 router.get("/", homeController.index);
-
-
+router.get("/#contact", homeController.index);
+router.get("/#login", homeController.index);
 app.use("/", router);
 app.listen(app.get("port"), () => {
   console.log(`Server running at http://localhost:${app.get("port")}`);
