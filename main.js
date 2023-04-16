@@ -1,17 +1,21 @@
-const express = require("express"),
-app = express(),
-router = express.Router(),
-layouts = require("express-ejs-layouts"),
-mongoose = require("mongoose"),
-methodOverride = require("method-override"),
-expressSession = require("express-session"),
-cookieParser = require("cookie-parser"),
-connectFlash = require("connect-flash"),
-passport = require("passport"),
-homeController = require("./controllers/homeController");
+const express = require("express");
+const app = express();
+const homeRoutes = require('./routes/homeRoutes'); //added
+
+const layouts = require("express-ejs-layouts");
+const mongoose = require("mongoose");
+const methodOverride = require("method-override");
+const expressSession = require("express-session");
+const cookieParser = require("cookie-parser");
+const connectFlash = require("connect-flash");
+const passport = require("passport");
+const homeController = require("./controllers/homeController");
+
+const router = express.Router();
 
 app.set("port", process.env.PORT || 3000);
 app.set("view engine", "ejs");
+app.use('/', homeRoutes); //modified
 
 router.use(express.static("public"));
 router.use(layouts);
@@ -41,9 +45,13 @@ router.use(
 //vaihda nämä kaksi router.use ja router.get kun reitit on määritelty.
 router.use(homeController.logRequestPaths);
 router.get("/", homeController.index);
+<<<<<<< HEAD
 router.get("/#contact", homeController.index);
 router.get("/#login", homeController.index);
 app.use("/", router);
+=======
+
+>>>>>>> b943bed34359500ecfa5a244de5da91e06a0c4d5
 app.listen(app.get("port"), () => {
   console.log(`Server running at http://localhost:${app.get("port")}`);
 });
