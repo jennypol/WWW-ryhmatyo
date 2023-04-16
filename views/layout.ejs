@@ -13,7 +13,7 @@
 <body>
 <ul>
     <li><a class="active" href="/">Home</a></li>
-    <li><a href ="/signin">Sign in</a></li>
+    <li><a href ="/users/new">Create an account</a></li>
     <li><a href="/contact">Contact</a></li>
     <li><a href="/news">News</a></li>
     <li><a href="/stories">Stories</a></li>
@@ -21,9 +21,34 @@
     <div class="headline">
         <h1 id="title">Traveller's site</h1>
     </div>
-    <div class="polaroid">
-        <img src="/images/travel.jpg" alt="nav" style="width:100%">
+    <div class="login-status">
+        <% if (loggedIn) { %>
+        <div class="bubble logged-in">
+            Logged in as <a href="<%=`/users/${currentUser._id}`%>">
+                <%= currentUser.userName %></a>
+        </div>
+        <div class="log-out">
+            <a href="/users/logout">Log out</a>
+        </div>
+        <%} else {%>
+        <div class="bubble log-in">
+            <a href="/users/login">Log In</a>
+        </div>
+        <% } %>
     </div>
+    <div class="flash">
+		<% if (flashMessages) { %>
+		<% if (flashMessages.success) { %>
+		<div class="flash success">
+			<%= flashMessages.success %>
+		</div>
+		<% } else if (flashMessages.error) { %>
+		<div class="flash error">
+			<%= flashMessages.error %>
+		</div>
+		<% } %>
+		<% } %>
+	</div>
 
     <div class="container">
         <%- body %>

@@ -1,0 +1,17 @@
+<div>
+    <form class="subscription-form" action="/users/create" method="POST">
+      <h2>Create a new user:</h2>
+      <label for="inputName">Name</label>
+      <input type="text" name="name" id="inputName" placeholder="Name" autofocus>
+      <label for="inputUsername">User name</label>
+      <input type="text" name="userName" id="inputUserName" placeholder="Username" required>
+      <label for="inputPassword">Password</label>
+      <input type="password" name="password" id="inputPassword"  placeholder="Password" required>
+      <label for="inputEmail">Email address</label>
+      <input type="email" name="email" id="inputEmail" placeholder="Email address" required>
+      <label for="inputAge">Age</label>
+      <input type="number" min="18" name="age" id="inputAge" placeholder="Age" pattern="\d+">
+      <button class="button" type="submit">Sign in</button>
+      <br>
+    </form>
+</div>

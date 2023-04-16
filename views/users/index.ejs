@@ -1,0 +1,23 @@
+<h2>Users Table</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% users.forEach(user => { %>
+    <tr>
+      <td><%= user.userName %></td>
+      <td><% if (loggedIn) { %>
+        True
+   
+    <%} else {%>
+        False
+        <% } %>
+    </td>
+    </tr> 
+    <% }); %>   
+  </tbody>
+</table>

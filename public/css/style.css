@@ -57,9 +57,6 @@ a {
     text-decoration: none;
 }
 
-
-
-
 .container {
     padding: 0% 10%;
 }
@@ -72,4 +69,61 @@ a {
 div.polaroid {
     width: 100%;
     margin-bottom: 0px;
+}
+.hidden-text {
+    -webkit-text-security: disc;
   }
+  
+  .flash {
+    background: rgba(103, 120, 209, 0.7);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0 3px 0;
+    position: absolute;
+    top: 8%;
+    
+  }
+  
+  .error {
+    background: rgba(209, 46, 42, 0.7);
+  }
+  
+  .login-status {
+    position: absolute;
+    right: 10px;
+    top: 10%;
+  }
+  
+  .log-out {
+    position: absolute;
+    right: 10px;
+  }
+  
+  .login-status .bubble {
+    padding: 10px;
+    background: #c1f7ff;
+    border-radius: 20px;
+  }
+  .table {
+    width: 100%;
+    padding: 0 30px;
+    border: 3px solid #697acb;
+    border-radius: 1px; 
+}
+
+.table th {
+    margin: 0%;
+    text-align: left;
+}
+
+.subscription-form input {
+    display: block;
+    margin-bottom: 0.5%;
+    margin-top: 0.1%;
+}
+
+.list-container {
+    padding: 0 5%;
+    
+}
