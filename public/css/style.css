@@ -75,13 +75,13 @@ div.polaroid {
   }
   
   .flash {
-    background: rgba(103, 120, 209, 0.7);
-    color: #fff;
+    background: rgba(68, 69, 75, 0.7);
+    color:white;
     width: 100%;
     text-align: center;
     padding: 5px 0 3px 0;
     position: absolute;
-    top: 8%;
+    top: 15%;
     
   }
   
@@ -101,14 +101,23 @@ div.polaroid {
   }
   
   .login-status .bubble {
-    padding: 10px;
-    background: #c1f7ff;
+    list-style-type: none;
     border-radius: 20px;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #010101;
+    top: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .login-status .bubble a{
+    color: white;
+
   }
   .table {
     width: 100%;
     padding: 0 30px;
-    border: 3px solid #697acb;
+    border: 3px solid #010101;
     border-radius: 1px; 
 }
 

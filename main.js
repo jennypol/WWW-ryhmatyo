@@ -20,8 +20,8 @@ const db = mongoose.connection;
 db.once("open", () => {
   console.log("Successfully connected to MongoDB using Mongoose!");
 });
-const testUser = new User({ name: "John Doe", userName: "SurfDude", email: "surfing@email.com", password: "Secret", age: "25"});
-testUser.save().then(savedUser =>{savedUser===testUser});
+//const testUser = new User({ name: "John Doe", userName: "SurfDude", email: "surfing@email.com", password: "Secret", age: "25"});
+//testUser.save().then(savedUser =>{savedUser===testUser});
 
 app.set("port", process.env.PORT || 3000);
 app.set("view engine", "ejs");
