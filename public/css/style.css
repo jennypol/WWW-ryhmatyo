@@ -91,7 +91,7 @@ div.polaroid {
   }
   
   .error {
-    background: rgba(209, 46, 42, 0.7);
+    background: red;
   }
   
   .login-status {
