@@ -36,32 +36,37 @@ li a {
 li a:hover:not(.active){
     background-color:#272a28;
 }
+
 div.headline {
     text-align: center;
     padding: 3px 0;
 }
-
 #title {
     color: #010101;
     margin: 0;
     font-family: "Baloo Bhaina";
     text-transform: uppercase;
 }
-
 img {
     width: 100%;
 }
-
 a {
     color: #333;
     text-decoration: none;
 }
-
 .container {
     padding: 0% 10%;
 }
 
 .home{
+    margin:0;
+    padding: 2% 10%;
+}
+.stories{
+    margin:0;
+    padding: 2% 10%;
+}
+.thanks{
     margin:0;
     padding: 2% 10%;
 }
