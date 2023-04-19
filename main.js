@@ -12,7 +12,6 @@ const homeController = require("./controllers/homeController");
 const usersController = require("./controllers/userController");
 const router = express.Router();
 const validator = require('express-validator');
-User = require("./models/user");
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://127.0.0.1:27017/travel_db");
 const db = mongoose.connection;
@@ -20,8 +19,6 @@ const db = mongoose.connection;
 db.once("open", () => {
   console.log("Successfully connected to MongoDB using Mongoose!");
 });
-//const testUser = new User({ name: "John Doe", userName: "SurfDude", email: "surfing@email.com", password: "Secret", age: "25"});
-//testUser.save().then(savedUser =>{savedUser===testUser});
 
 app.set("port", process.env.PORT || 3000);
 app.set("view engine", "ejs");
@@ -59,7 +56,7 @@ router.use(
 
 router.use(passport.initialize());
 router.use(passport.session());
-//let User = require("./models/user");
+let User = require("./models/user");
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
