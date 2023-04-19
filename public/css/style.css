@@ -105,7 +105,7 @@ div.polaroid {
     right: 10px;
   }
   
-  .login-status .bubble {
+.login-status .bubble {
     list-style-type: none;
     border-radius: 20px;
     padding: 10px;
@@ -114,21 +114,21 @@ div.polaroid {
     top: 0;
     width: 100%;
     margin: 0;
-  }
-  .login-status .bubble a{
-    color: white;
+}
+.login-status .bubble a{
+  color: white;
 
-  }
-  .table {
-    width: 100%;
-    padding: 0 30px;
-    border: 3px solid #010101;
-    border-radius: 1px; 
+}
+.table {
+  width: 100%;
+  padding: 0 30px;
+  border: 3px solid #010101;
+  border-radius: 1px; 
 }
 
 .table th {
-    margin: 0%;
-    text-align: left;
+  margin: 0%;
+  text-align: left;
 }
 
 .subscription-form input {
