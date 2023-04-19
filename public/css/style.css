@@ -86,7 +86,7 @@ div.polaroid {
     text-align: center;
     padding: 5px 0 3px 0;
     position: absolute;
-    top: 10%;
+    top: 8%;
     
   }
   
@@ -97,7 +97,7 @@ div.polaroid {
   .login-status {
     position: absolute;
     right: 10px;
-    top: 10%;
+    top: 8%;
   }
   
   .log-out {
