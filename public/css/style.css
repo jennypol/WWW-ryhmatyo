@@ -92,6 +92,7 @@ div.polaroid {
   
   .error {
     background: red;
+    padding: 15px 0 15px 0;
   }
   
   .login-status {
@@ -111,9 +112,14 @@ div.polaroid {
     padding: 10px;
     overflow: hidden;
     background-color: #010101;
-    top: 0;
     width: 100%;
-    margin: 0;
+   
+}
+.bubble.log-in {
+  margin-top: 15%;
+}
+.bubble.logged-in{
+  margin-top: 5%;
 }
 .login-status .bubble a{
   color: white;
