@@ -3,18 +3,18 @@
   <thead>
     <tr>
       <th>User name</th>
-      <th>Active</th>
+      <th>Online</th>
     </tr>
   </thead>
   <tbody>
     <% users.forEach(user => { %>
     <tr>
       <td><%= user.userName %></td>
-      <td><% if (loggedIn) { %>
-        True
+      <td><% if (loggedIn && currentUser.userName===user.userName) { %>
+        &#9989;
    
     <%} else {%>
-        False
+        &#10060;
         <% } %>
     </td>
     </tr> 
