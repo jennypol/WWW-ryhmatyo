@@ -63,12 +63,12 @@ module.exports = {
     },
     login: (req, res) => {
       res.render("users/login");
+  
     },
     authenticate: passport.authenticate("local",  {
       failureRedirect: "/users/login",
-      failureFlash: "Failed to login.",
-      successRedirect: "/",
-      successFlash: "Logged in!"
+      successRedirect: "/users",
+      failureFlash: true
     }),
     validate: (req, res, next) => {
         req.normalizeEmail()

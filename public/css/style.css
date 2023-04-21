@@ -84,12 +84,15 @@ div.polaroid {
     color:white;
     width: 100%;
     text-align: center;
-    padding: 5px 0 3px 0;
     position: absolute;
     top: 8%;
     
   }
   
+  .success {
+    background: #010101;
+    padding: 5px 0 3px 0;
+  }
   .error {
     background: red;
     padding: 15px 0 15px 0;
@@ -112,6 +115,7 @@ div.polaroid {
     padding: 10px;
     overflow: hidden;
     background-color: #010101;
+    color:white;
     width: 100%;
    
 }
