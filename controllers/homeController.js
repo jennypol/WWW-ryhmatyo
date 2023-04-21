@@ -18,12 +18,6 @@ module.exports = {
     },
     stories: (req, res) => {
       res.render("stories");
-    },
-    contact: (req, res) => {
-        res.render("contact");
-    },
-    thanks: (req, res) => {
-      res.render("thanks");
     }
   };
   

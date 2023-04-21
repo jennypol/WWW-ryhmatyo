@@ -10,6 +10,8 @@ const connectFlash = require("connect-flash");
 const passport = require("passport");
 const homeController = require("./controllers/homeController");
 const usersController = require("./controllers/userController");
+const contactController = require("./controllers/contactController");
+Contact = require("./models/contact");
 const router = express.Router();
 const validator = require('express-validator');
 mongoose.Promise = global.Promise;
@@ -74,7 +76,10 @@ router.use(homeController.logRequestPaths);
 router.get("/", homeController.index);
 router.get("/news", homeController.news);
 router.get("/stories", homeController.stories);
-router.get("/contact", homeController.contact);
+
+router.get("/contact", contactController.contact);
+router.get("/thanks", contactController.thanks);
+router.post("/contact/create", contactController.create, contactController.redirectView);
 
 router.get("/users", usersController.index, usersController.indexView);
 router.get("/users/new", usersController.new);
