@@ -1,3 +1,4 @@
+<div class="createaccount">
 <div>
     <form class="subscription-form" action="/users/create" method="POST">
       <h2>Create a new user:</h2>
@@ -5,14 +6,15 @@
       <input type="text" name="name" id="inputName" placeholder="Name" autofocus>
       <label for="inputUsername">User name</label>
       <input type="text" name="userName" id="inputUserName" placeholder="Username" required>
-      <label for="inputPassword">Password</label>
+      <label for="inputPassword">Password<br></label>
       <input type="password" name="password" id="inputPassword"  placeholder="Password" required>
-      <label for="inputEmail">Email address</label>
+      <label for="inputEmail"><br>Email address<br></label>
       <input type="email" name="email" id="inputEmail" placeholder="Email address" required>
-      <label for="inputAge">Age</label><br>
+      <label for="inputAge"><br>Age</label><br>
       <small>(You must be 18 years or older to create an acount)</small> <br>
       <input type="number" min="18" name="age" id="inputAge" placeholder="Age" pattern="\d+">
       <input type="submit" value="Submit">
       <br>
     </form>
+</div>
 </div>

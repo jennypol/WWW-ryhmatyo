@@ -1,139 +1,198 @@
 @import url("https://fonts.googleapis.com/css?family=Baloo+Bhaina");
 
 body {
-    margin:0;
-    padding-top: 100px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: #010101;
+  margin: 0;
+  padding-top: 50px #ccbaba;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #010101;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #010101;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-li{
-    float: left;
+.topnav {
+  overflow: hidden;
+  background-color: #0a0a0a;
 }
 
-li a {
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width:600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
     display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnavresponsive {
+    position: relative;
+  }
+
+  .topnavresponsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnavresponsive a {
+    float: none;
+    display: block;
+    background-color: #9c8282;
     color: white;
-    text-align: center;
-    padding: 20px 50px;
-    text-decoration: none;
-    float: left;
-    
+    padding: 14px 16px;
+  }
+  .topnavresponsive a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
 }
-.active{
-    background-color:#272a28;
-}
-li a:hover:not(.active){
-    background-color:#272a28;
-}
+
+
+
 
 div.headline {
-    text-align: center;
-    padding: 3px 0;
+  text-align: center;
+  padding: 3px 0;
+  background-color: #464242;
 }
+
 #title {
-    color: #010101;
-    margin: 0;
-    font-family: "Baloo Bhaina";
-    text-transform: uppercase;
-}
-img {
-    width: 100%;
-}
-a {
-    color: #333;
-    text-decoration: none;
-}
-.container {
-    padding: 0% 10%;
+  color: white;
+  margin: 0;
+  font-family: "Baloo Bhaina";
+  text-transform: uppercase;
 }
 
-.home{
-    margin:0;
-    padding: 2% 10%;
-}
-.stories{
-    margin:0;
-    padding: 2% 10%;
-}
-.thanks{
-    margin:0;
-    padding: 2% 10%;
-}
-
-div.polaroid {
+/*img {
     width: 100%;
     margin-bottom: 0px;
+}*/
+a {
+  color: #333;
+  text-decoration: none;
 }
+.container {
+  padding: 0% 10% #ccbaba;
+}
+
+.home {
+  margin: 0;
+  padding: 2% 10%;
+}
+
+.stories {
+  margin: 0;
+  padding: 2% 10%;
+}
+
+.thanks {
+  margin: 0;
+  padding: 2% 10%;
+}
+.contact{
+  margin: 0;
+  padding: 2% 10%;
+}
+.news{
+  margin: 0;
+  padding: 2% 10%;
+}
+.createaccount{
+  margin: 0;
+  padding: 2% 10%;
+}
+
+.polaroid img {
+  padding:0% 0%;
+  max-width: 100%;
+  margin: 0;
+}
+
 .hidden-text {
-    -webkit-text-security: disc;
-  }
-  
-  .flash {
-    background: #010101;
-    color:white;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 8%;
-    
-  }
-  
-  .success {
-    background: #010101;
-    padding: 5px 0 3px 0;
-  }
-  .error {
-    background: red;
-    padding: 15px 0 15px 0;
-  }
-  
-  .login-status {
-    position: absolute;
-    right: 10px;
-    top: 8%;
-  }
-  
-  .log-out {
-    position: absolute;
-    right: 10px;
-  }
-  
-.login-status .bubble {
-    list-style-type: none;
-    border-radius: 20px;
-    padding: 10px;
-    overflow: hidden;
-    background-color: #010101;
-    color:white;
-    width: 100%;
-   
+  -webkit-text-security: disc;
 }
+
+.flash {
+  background: #010101;
+  color: white;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+
+}
+
+.success {
+  background: #010101;
+  padding: 5px 0 3px 0;
+}
+
+.error {
+  background: red;
+  padding: 5px 0 3px 0;
+}
+
+.login-status {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  text-align: center;
+}
+
+.log-out {
+  position: absolute;
+  right: 10px;
+}
+
+.login-status .bubble {
+  list-style-type: none;
+  border-radius: 20px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  color: white;
+  width: 100%;
+
+}
+
 .bubble.log-in {
   margin-top: 15%;
 }
-.bubble.logged-in{
+
+.bubble.logged-in {
   margin-top: 5%;
 }
-.login-status .bubble a{
+
+.login-status .bubble a {
   color: white;
 
 }
+
 .table {
   width: 100%;
-  padding: 0 30px;
   border: 3px solid #010101;
-  border-radius: 1px; 
+  border-radius: 1px;
+  margin: 0;
+  padding: 0 30px;
 }
 
 .table th {
@@ -142,22 +201,24 @@ div.polaroid {
 }
 
 .subscription-form input {
-    display: block;
-    margin-bottom: 0.5%;
-    margin-top: 0.1%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
 
 .list-container {
-    padding: 0 5%;
-    
+  padding: 0 5%;
+
 }
-input[type=text], select {
+
+input[type=text],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 0px;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 input[type=feedback], select {
@@ -182,7 +243,65 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
 }
+input[type=submit]:hover {
+  background-color: rgb(72, 67, 67);
+}
 
 html {
-  overflow-x:hidden
+  overflow-x: hidden
+}
+.Footer{
+  left:0;
+  bottom: 0;
+  width: 100%;
+  background-color: #464242;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
