@@ -11,6 +11,7 @@ const passport = require("passport");
 const homeController = require("./controllers/homeController");
 const usersController = require("./controllers/userController");
 const contactController = require("./controllers/contactController");
+const errorController = require("./controllers/errorController");
 Contact = require("./models/contact");
 const router = express.Router();
 const validator = require('express-validator');
@@ -92,6 +93,10 @@ router.post(
 router.get("/users/login", usersController.login);
 router.post("/users/login", usersController.authenticate);
 router.get("/users/logout", usersController.logout, usersController.redirectView);
+
+router.use(errorController.logErrors);
+router.use(errorController.pageNotFoundError);
+router.use(errorController.internalServerError);
 
 module.exports = router;
 app.listen(app.get("port"), () => {

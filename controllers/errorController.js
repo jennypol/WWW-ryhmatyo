@@ -12,7 +12,7 @@ module.exports = {
   pageNotFoundError: (req, res) => {
     let errorCode = httpStatus.NOT_FOUND;
     res.status(errorCode);
-    res.render("error");
+    res.send(`${errorCode} | The page does not exist!`);
   },
 
   internalServerError: (error, req, res, next) => {
@@ -35,20 +35,3 @@ module.exports = {
   }
 };
 
-// set up a connection to your database
-mongoose.connect('mongodb://localhost/my_database');
-
-// add an error handler to the connection object
-mongoose.connection.on('error', (err) => {
-  console.error(`Mongoose connection error: ${err}`);
-});
-
-// add Mongoose's built-in error handler middleware
-mongoose.plugin((schema) => {
-  schema.post('findOneAndDelete', (error, res, next) => {
-    if (error) {
-      console.error(`Mongoose error: ${error}`);
-      next(error);
-    }
-  });
-});
