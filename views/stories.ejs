@@ -22,10 +22,11 @@
       </div>
       
       <h3>Leave a comment:</h3>
-      <form>
-        <textarea name="comment" rows="3" ></textarea>
-        <input type="submit" value="Submit">
+      <form id="japan">
+        <textarea name="comment" id="comment" rows="3" ></textarea>
+        <input type="submit" value="Submit" onclick="clicked()">
       </form>
+      <div id="comments"></div>
     </div>
   
     <div class="story">
@@ -47,10 +48,11 @@
       </div>
       
       <h3>Leave a comment:</h3>
-      <form>
-        <textarea name="comment" rows="3"></textarea>
-        <input type="submit" value="Submit">
+      <form id="mountains">
+        <textarea name="comment" id="commentM" rows="3"></textarea>
+        <input type="submit" value="Submit" onclick="clicked2()">
       </form>
+      <div id="mountainComments"></div>
     </div>
   
     <div class="story">
@@ -71,11 +73,37 @@
         </div>
       </div>
       <h3>Leave a comment:</h3>
-      <form>
-        <textarea name="comment" rows="3"></textarea>
-        <input type="submit" value="Submit">
+      <form id="roadtrip">
+        <textarea name="comment" id="commentR" rows="3"></textarea>
+        <input type="submit" value="Submit" onclick="clicked3()">
       </form>
+      <div id="roadComments"></div>
     </div>
   
   </div>
-  
+
+<script>
+   function clicked(){
+      let p = document.createElement("br");
+      var japmes =  document.getElementById("comment").value;
+      document.getElementById("comments").append(japmes, p);
+      document.getElementById("comment").value = "";
+      event.preventDefault(); 
+    }
+    function clicked2(){
+      let p = document.createElement("br");
+      var mountmes = document.getElementById("commentM").value;
+      document.getElementById("mountainComments").append(mountmes, p); 
+      document.getElementById("commentM").value = "";
+      event.preventDefault();
+    }
+    function clicked3(){
+      let p = document.createElement("br");
+      var roadmes = document.getElementById("commentR").value;
+      document.getElementById("roadComments").append(roadmes, p);
+      document.getElementById("commentR").value = "";
+      event.preventDefault();
+    }
+   
+    
+</script>  
