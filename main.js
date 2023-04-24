@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-//const homeRoutes = require('./routes/homeRoutes'); //added
 const layouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
@@ -24,7 +23,7 @@ db.once("open", () => {
 
 app.set("port", process.env.PORT || 3000);
 app.set("view engine", "ejs");
-app.use('/', router); //modified
+app.use('/', router); 
 app.use('/signin', router);
 app.use('/contact', router);
 app.use('/news', router);

@@ -70,30 +70,6 @@ module.exports = {
       successRedirect: "/users",
       failureFlash: true
     }),
-    validate: (req, res, next) => {
-        req.normalizeEmail()
-          .trim().escape()
-          .check("email", "Email is invalid").isEmail();
-        req.check("userName", "Username can't be empty").notEmpty().trim().escape();
-        req.check("password", "Password can't be empty").notEmpty().trim().escape();
-        req
-          .check("age", "invalid age")
-          .notEmpty()
-          .isInt()
-          .equals(req.body.age);
-          
-        req.validationResult().then(error => {
-            if (!error.isEmpty()) {
-              let messages = error.array().map(e => e.msg);
-              req.skip = true;
-              req.flash("error", messages.join(" and "));
-              res.locals.redirect = "/users/new";
-              next();
-            } else {
-              next();
-            }
-        });  
-    },
     logout: (req, res, next) => {
       req.logout(function(err) {
         if(err) {return next(err);
