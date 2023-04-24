@@ -14,7 +14,6 @@ const contactController = require("./controllers/contactController");
 const errorController = require("./controllers/errorController");
 Contact = require("./models/contact");
 const router = express.Router();
-const validator = require('express-validator');
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://127.0.0.1:27017/travel_db");
 const db = mongoose.connection;
@@ -71,7 +70,7 @@ router.use((req, res, next) => {
   res.locals.flashMessages = req.flash();
   next();
 });
-//router.use(validator());
+
 
 router.use(homeController.logRequestPaths);
 router.get("/", homeController.index);
@@ -86,7 +85,6 @@ router.get("/users", usersController.index, usersController.indexView);
 router.get("/users/new", usersController.new);
 router.post(
   "/users/create",
-  //usersController.validate,
   usersController.create,
   usersController.redirectView
 );
